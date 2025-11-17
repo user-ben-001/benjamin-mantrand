@@ -1,0 +1,109 @@
+// var --------------------------------------------------------
+$background: #ede7d7;
+$primary: #fd6735;
+$clear: #ffffff00;
+$placeholder: #ff00bb;
+
+// mixins ------------------------------------------------------
+
+// mobile version -------------------------------------------------------------------------------
+// natif------------------------------------------------------
+body {
+    margin: 0;
+    background-color: $background;
+    color: $primary;
+
+    #hook {
+        text-align: center;
+        text-decoration: underline;
+        font-style: italic;
+        padding: 1em;
+    }
+}
+
+header {
+    background-color: $primary;
+    color: $background;
+    padding: 5px;
+
+    .cadre {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 5px;
+        border: 2px solid $background;
+    }
+}
+
+main {
+    width: 100%;
+}
+
+nav {}
+
+footer {}
+
+// id -------------------------------------------------------
+#left {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: center;
+}
+
+#center {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+#right {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+    justify-content: center;
+}
+
+#mainSec {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#comp {
+    margin: 1em;
+    padding: 1em;
+    border: 2px solid $primary;
+    border-top: 5px solid $primary;
+    border-bottom: 5px solid $primary;
+    justify-content: center;
+
+    #tech {
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: center;
+        justify-content: space-around;
+        img {
+            width: 50px;
+            color: $primary;
+        }
+    }
+}
+
+#xp {
+    background-color: $primary;
+    color: $background;
+    margin: 1em;
+    padding: 1em;
+}
+
+#format {}
+
+// class -----------------------------------------------------
+
+
+// pc version ----------------------------------------------------------------------------------
+@media (min-width:600px) {}
