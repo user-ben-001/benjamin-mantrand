@@ -69,10 +69,15 @@ footer {
         flex-flow: row nowrap;
         text-align: center;
         justify-content: space-around;
+        height: 7em;
 
         img {
             width: 50px;
             filter: invert(57%) sepia(51%) saturate(4497%) hue-rotate(339deg) brightness(101%) contrast(98%);
+        }
+
+        img:hover {
+            width: 55px;
         }
     }
 }
