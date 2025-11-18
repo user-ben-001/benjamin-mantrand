@@ -87,7 +87,7 @@ footer .cadre {
 .left {
   display: flex;
   flex-flow: column nowrap;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 }
 .left img {
@@ -106,8 +106,30 @@ footer .cadre {
 .right {
   display: flex;
   flex-flow: column nowrap;
-  align-items: end;
+  align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 775px) {
+  main {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-content: center;
+  }
+  #mainSec {
+    height: 80vh;
+  }
+  #comp {
+    width: 20em;
+  }
+  #xp {
+    width: 20em;
+  }
+  #format {
+    width: 20em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
