@@ -5,6 +5,12 @@ $clear: #ffffff00;
 $placeholder: #ff00bb;
 
 // mixins ------------------------------------------------------
+@mixin cadre($color) {
+    border: 2px solid $color;
+        border-top: 5px solid $color;
+        border-bottom: 5px solid $color;
+        padding: 1em;
+}
 
 // mobile version -------------------------------------------------------------------------------
 // natif------------------------------------------------------
@@ -27,11 +33,9 @@ header {
     padding: 5px;
 
     .cadre {
+        @include cadre($background);
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        padding: 5px;
-        border: 2px solid $background;
+        justify-content: space-between;
     }
 }
 
@@ -41,32 +45,17 @@ main {
 
 nav {}
 
-footer {}
+footer {
+    background-color: $primary;
+    color: $background;
+    padding: 5px;
 
-// id -------------------------------------------------------
-#left {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: start;
-    justify-content: center;
-}
-
-#center {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-    h1 {
-        margin: 0;
+    .cadre {
+        @include cadre($background);
     }
 }
 
-#right {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: end;
-    justify-content: center;
-}
+// id -------------------------------------------------------
 
 #mainSec {
     display: flex;
@@ -75,20 +64,17 @@ footer {}
 
 #comp {
     margin: 1em;
-    padding: 1em;
-    border: 2px solid $primary;
-    border-top: 5px solid $primary;
-    border-bottom: 5px solid $primary;
-    justify-content: center;
+    @include cadre($primary);
 
     #tech {
         display: flex;
         flex-flow: row nowrap;
         text-align: center;
         justify-content: space-around;
+
         img {
             width: 50px;
-            color: $primary;
+            filter: invert(57%) sepia(51%) saturate(4497%) hue-rotate(339deg) brightness(101%) contrast(98%);
         }
     }
 }
@@ -98,11 +84,45 @@ footer {}
     color: $background;
     margin: 1em;
     padding: 1em;
+
+    .cadre {
+        @include cadre($background);
+    }
 }
 
-#format {}
+#format {
+    @include cadre($primary);
+    margin: 1em;
+}
 
 // class -----------------------------------------------------
+.left {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: center;
+
+    img {
+        height: 85px;
+    }
+}
+
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.right {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: end;
+    justify-content: center;
+}
 
 
 // pc version ----------------------------------------------------------------------------------
