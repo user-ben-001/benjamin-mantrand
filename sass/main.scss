@@ -43,8 +43,6 @@ main {
     width: 100%;
 }
 
-nav {}
-
 footer {
     background-color: $primary;
     color: $background;
@@ -127,10 +125,6 @@ footer {
 
 // pc version ----------------------------------------------------------------------------------
 @media (min-width:775px) {
-    header {
-        
-    }
-
     main {
         height: 100%;
         display: flex;
