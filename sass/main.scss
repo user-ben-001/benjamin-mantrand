@@ -127,17 +127,21 @@ footer {
 
 // pc version ----------------------------------------------------------------------------------
 @media (min-width:775px) {
-main {
-    height: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: start;
-    align-content: center;
-}
+    header {
+        
+    }
+
+    main {
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-content: center;
+    }
 
     #mainSec {
         height: 80vh;
-        
+
     }
 
     #comp {
