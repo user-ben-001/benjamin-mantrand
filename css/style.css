@@ -120,7 +120,7 @@ footer .cadre {
   justify-content: center;
 }
 
-@media (min-width: 775px) {
+@media print, (min-width: 775px) {
   main {
     height: 100%;
     display: flex;
@@ -129,16 +129,16 @@ footer .cadre {
     align-content: center;
   }
   #mainSec {
-    height: 80vh;
+    height: 52em;
   }
   #comp {
-    width: 20em;
+    width: 25em;
   }
   #xp {
-    width: 20em;
+    width: 25em;
   }
   #format {
-    width: 20em;
+    width: 25em;
   }
 }
 
