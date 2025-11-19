@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "Verily";
+  src: local("Verily serif mono"), url(VerilySerifMono.otf);
+}
 body {
   margin: 0;
   background-color: #ede7d7;
   color: #fd6735;
+  font-family: "Verily";
+  font-size: small;
 }
 body #hook {
   text-align: center;
@@ -65,7 +71,6 @@ footer .cadre {
 }
 #comp #tech img:hover {
   width: 55px;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #xp {
