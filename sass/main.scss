@@ -33,7 +33,7 @@ body {
     #hook {
         text-align: center;
         text-decoration: underline;
-        font-style: italic;
+        font-style: oblique;
         padding: 1em;
     }
 }
@@ -72,9 +72,19 @@ footer {
     flex-flow: row nowrap;
 }
 
+// class -----------------------------------------------------
+
 .cadreSection {
     margin: 1em;
     @include cadre($primary);
+
+}
+
+.cadreSectionAccent {
+    background-color: $primary;
+    color: $background;
+    margin: 1em;
+    padding: 1em;
 
     #tech {
         display: flex;
@@ -85,28 +95,21 @@ footer {
 
         img {
             width: 50px;
-            filter: invert(57%) sepia(51%) saturate(4497%) hue-rotate(339deg) brightness(101%) contrast(98%);
+            filter: invert(92%) sepia(4%) saturate(1199%) hue-rotate(338deg) brightness(107%) contrast(86%);
         }
 
         img:hover {
             width: 55px;
         }
     }
-}
-
-.cadreSectionAccent {
-    background-color: $primary;
-    color: $background;
-    margin: 1em;
-    padding: 1em;
 
     .cadre {
         @include cadre($background);
+        padding-top: 0;
     }
 }
 
 
-// class -----------------------------------------------------
 .left {
     display: flex;
     flex-flow: column nowrap;
@@ -152,7 +155,7 @@ footer {
     }
 
     #mainSec {
-        height: 52em;
+        height: 55em;
 
     }
 
@@ -165,24 +168,19 @@ footer {
 @media print {
     body {
         width: 100%;
-        font-size: 16px;
     }
 
     main {
         height: 100%;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         justify-content: start;
         align-content: center;
     }
-    
-    #mainSec {
-        height: 52em;
 
-    }
 
     .cadreSection,
     .cadreSectionAccent {
-        width: 25em;
+        width: 100%;
     }
 }

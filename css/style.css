@@ -12,7 +12,7 @@ body {
 body #hook {
   text-align: center;
   text-decoration: underline;
-  font-style: italic;
+  font-style: oblique;
   padding: 1em;
 }
 
@@ -58,20 +58,6 @@ footer .cadre {
   border-bottom: 5px solid #fd6735;
   padding: 1em;
 }
-.cadreSection #tech {
-  display: flex;
-  flex-flow: row nowrap;
-  text-align: center;
-  justify-content: space-around;
-  height: 7em;
-}
-.cadreSection #tech img {
-  width: 50px;
-  filter: invert(57%) sepia(51%) saturate(4497%) hue-rotate(339deg) brightness(101%) contrast(98%);
-}
-.cadreSection #tech img:hover {
-  width: 55px;
-}
 
 .cadreSectionAccent {
   background-color: #fd6735;
@@ -79,11 +65,26 @@ footer .cadre {
   margin: 1em;
   padding: 1em;
 }
+.cadreSectionAccent #tech {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-around;
+  height: 7em;
+}
+.cadreSectionAccent #tech img {
+  width: 50px;
+  filter: invert(92%) sepia(4%) saturate(1199%) hue-rotate(338deg) brightness(107%) contrast(86%);
+}
+.cadreSectionAccent #tech img:hover {
+  width: 55px;
+}
 .cadreSectionAccent .cadre {
   border: 2px solid #ede7d7;
   border-top: 5px solid #ede7d7;
   border-bottom: 5px solid #ede7d7;
   padding: 1em;
+  padding-top: 0;
 }
 
 .left {
@@ -124,7 +125,7 @@ footer .cadre {
     align-content: center;
   }
   #mainSec {
-    height: 52em;
+    height: 55em;
   }
   .cadreSection,
   .cadreSectionAccent {
@@ -134,21 +135,17 @@ footer .cadre {
 @media print {
   body {
     width: 100%;
-    font-size: 16px;
   }
   main {
     height: 100%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: start;
     align-content: center;
   }
-  #mainSec {
-    height: 52em;
-  }
   .cadreSection,
   .cadreSectionAccent {
-    width: 25em;
+    width: 100%;
   }
 }
 
