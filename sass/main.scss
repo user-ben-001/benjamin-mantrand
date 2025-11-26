@@ -3,6 +3,7 @@ $background: #ede7d7;
 $primary: #fd6735;
 $clear: #ffffff00;
 $placeholder: #ff00bb;
+$font-size: 14px;
 
 @font-face {
     font-family: "Verily";
@@ -27,7 +28,7 @@ body {
     background-color: $background;
     color: $primary;
     font-family: "Verily";
-    font-size: small;
+    font-size: $font-size;
 
     #hook {
         text-align: center;
@@ -71,7 +72,7 @@ footer {
     flex-flow: row nowrap;
 }
 
-#comp {
+.cadreSection {
     margin: 1em;
     @include cadre($primary);
 
@@ -93,7 +94,7 @@ footer {
     }
 }
 
-#xp {
+.cadreSectionAccent {
     background-color: $primary;
     color: $background;
     margin: 1em;
@@ -104,10 +105,6 @@ footer {
     }
 }
 
-#format {
-    @include cadre($primary);
-    margin: 1em;
-}
 
 // class -----------------------------------------------------
 .left {
@@ -140,8 +137,11 @@ footer {
 
 
 // pc version ----------------------------------------------------------------------------------
-@media print,
-(min-width:775px) {
+@media (min-width:775px) {
+
+    body {
+        width: 100%;
+    }
 
     main {
         height: 100%;
@@ -156,15 +156,33 @@ footer {
 
     }
 
-    #comp {
+    .cadreSection,
+    .cadreSectionAccent {
         width: 25em;
     }
+}
 
-    #xp {
-        width: 25em;
+@media print {
+    body {
+        width: 100%;
+        font-size: 16px;
     }
 
-    #format {
+    main {
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-content: center;
+    }
+    
+    #mainSec {
+        height: 52em;
+
+    }
+
+    .cadreSection,
+    .cadreSectionAccent {
         width: 25em;
     }
 }

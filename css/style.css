@@ -7,7 +7,7 @@ body {
   background-color: #ede7d7;
   color: #fd6735;
   font-family: "Verily";
-  font-size: small;
+  font-size: 14px;
 }
 body #hook {
   text-align: center;
@@ -51,47 +51,39 @@ footer .cadre {
   flex-flow: row nowrap;
 }
 
-#comp {
+.cadreSection {
   margin: 1em;
   border: 2px solid #fd6735;
   border-top: 5px solid #fd6735;
   border-bottom: 5px solid #fd6735;
   padding: 1em;
 }
-#comp #tech {
+.cadreSection #tech {
   display: flex;
   flex-flow: row nowrap;
   text-align: center;
   justify-content: space-around;
   height: 7em;
 }
-#comp #tech img {
+.cadreSection #tech img {
   width: 50px;
   filter: invert(57%) sepia(51%) saturate(4497%) hue-rotate(339deg) brightness(101%) contrast(98%);
 }
-#comp #tech img:hover {
+.cadreSection #tech img:hover {
   width: 55px;
 }
 
-#xp {
+.cadreSectionAccent {
   background-color: #fd6735;
   color: #ede7d7;
   margin: 1em;
   padding: 1em;
 }
-#xp .cadre {
+.cadreSectionAccent .cadre {
   border: 2px solid #ede7d7;
   border-top: 5px solid #ede7d7;
   border-bottom: 5px solid #ede7d7;
   padding: 1em;
-}
-
-#format {
-  border: 2px solid #fd6735;
-  border-top: 5px solid #fd6735;
-  border-bottom: 5px solid #fd6735;
-  padding: 1em;
-  margin: 1em;
 }
 
 .left {
@@ -120,7 +112,10 @@ footer .cadre {
   justify-content: center;
 }
 
-@media print, (min-width: 775px) {
+@media (min-width: 775px) {
+  body {
+    width: 100%;
+  }
   main {
     height: 100%;
     display: flex;
@@ -131,13 +126,28 @@ footer .cadre {
   #mainSec {
     height: 52em;
   }
-  #comp {
+  .cadreSection,
+  .cadreSectionAccent {
     width: 25em;
   }
-  #xp {
-    width: 25em;
+}
+@media print {
+  body {
+    width: 100%;
+    font-size: 16px;
   }
-  #format {
+  main {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-content: center;
+  }
+  #mainSec {
+    height: 52em;
+  }
+  .cadreSection,
+  .cadreSectionAccent {
     width: 25em;
   }
 }
